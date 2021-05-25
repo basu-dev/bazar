@@ -1,0 +1,46 @@
+<div class="layout-topbar">
+    <div class="layout-topbar-wrapper">
+        <div class="layout-topbar-left">
+            <div class="layout-topbar-logo" id="logolink" style="cursor: pointer; outline: none;" routerLink="/">
+                iMart
+            </div>
+        </div>
+
+        <div class="layout-topbar-right">
+            <a class="menu-button" href="#" (click)="appMain.onMenuButtonClick($event)">
+                <i class="pi pi-bars"></i>
+            </a>
+
+            <ul class="layout-topbar-actions">
+                <li #searchItem class="search-item topbar-item" [ngClass]="{'active-topmenuitem': appMain.search}">
+                    <a href="#" (click)="appMain.onTopbarItemClick($event,searchItem)">
+                        <span class="topbar-icon">
+                            <i class="pi pi-search"></i>
+                        </span>
+                    </a>
+
+                    <div class="search-input-wrapper">
+                        <span class="p-input-icon-left">
+                            <i class="pi pi-search"></i>
+                            <input type="text" pInputText placeholder="Search..."/>
+                        </span>
+                    </div>
+
+                    <ul class="fadeInDown">
+                        <div class="search-input-wrapper p-fluid">
+                            <span class="p-input-icon-left">
+                                <i class="pi pi-search"></i>
+                                <input type="text" pInputText placeholder="Search..." (click)="appMain.searchClick = true;"/>
+                            </span>
+                        </div>
+                    </ul>
+                </li>
+
+                
+             
+            </ul>
+
+          
+        </div>
+    </div>
+</div>
